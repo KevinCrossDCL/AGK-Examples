@@ -1,6 +1,13 @@
 # AGK-Examples
 A collection of mini AGK projects that I've created, some were created for no reason other than being curious.
 
+### Convert Material Icons To Subimages
+This script takes the downloaded Material Icons (you get them from here: https://github.com/google/material-design-icons/tree/master/png) and converts them to subimages so that you can easily load them in to your project. An example how to use them can be found in the Material Icons project mentioned below (which can also be found in this group of AGK examples)
+
+With this script you can convert all icons to subimages, or just a selection of icons that you want for your project. There's examples, and comments at the top of the script showing how to do this.
+
+The icons provided in the original repository are coloured black. This script inverts the colour so that they are saved as white. Having them white makes it easier to colour the icons however you want in your project.
+
 ### Material Icons
 This script contains all of the Material Icons converted for AGK use. There is a folder for each type i.e.: baseline, outlined, round, sharp, and twotone.
 
