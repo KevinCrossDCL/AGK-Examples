@@ -12,6 +12,8 @@ You can use these icons in OryUI if you want to replace the default icon set whi
 
 In your app you are only likely to use one style and size, so you would only need to copy that style and size folder. There's no need to copy all styles and sizes in to your project as that will just make your overall app size larger.
 
+To see all of the available icons and their names, visit: https://material.io/resources/icons
+
 ### Pixel Art To Sprite Art
 This script contains a simple function that reads any image and converts it to pixel art built from coloured sprites. It works best with images that have large blocks of the same colour in i.e. a pixel art image, or an Arkanoid type game level screen.
 
