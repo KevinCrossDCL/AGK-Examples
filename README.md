@@ -10,6 +10,8 @@ Two sizes for each set have been provided. 48px and 96px. The 96px is recommende
 
 You can use these icons in OryUI if you want to replace the default icon set which is currently baseline 48px. If so, only copy and replace the *.png, and *.txt files from the desired style and size i.e. twotone/96px folder into media/OryUIMedia/Material-Icons. Don't copy the folder, just the files within it.
 
+In your app you are only likely to use one style and size, so you would only need to copy that style and size folder. There's no need to copy all styles and sizes in to your project as that will just make your overall app size larger.
+
 ### Pixel Art To Sprite Art
 This script contains a simple function that reads any image and converts it to pixel art built from coloured sprites. It works best with images that have large blocks of the same colour in i.e. a pixel art image, or an Arkanoid type game level screen.
 
