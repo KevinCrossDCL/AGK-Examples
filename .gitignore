@@ -1,2 +1,12 @@
+# Built application files
+*.apk
+*.app
+*.ipa
+
+# Mac OS files
 .DS_Store
+
+# Others
+Color-Based-On-Image/
 Pixel-Art-To-Sprite-Art/media/bytecode.byc
+Material-Icons/media/bytecode.byc
