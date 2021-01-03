@@ -62,7 +62,7 @@ for s = 1 to 5
 					
 					imageFilename$ = GetRawFolderFileName(nameFolder, c)
 					imageFilename$ = ReplaceString(imageFilename$, outputFolder$ + "_", "", 1)
-					imageFilename$ = ReplaceString(imageFilename$, "outline_", "", 1)
+					//imageFilename$ = ReplaceString(imageFilename$, "outline_", "", 1)
 					imageFilename$ = ReplaceString(imageFilename$, "_black", "", 1)
 					imageFilename$ = ReplaceString(imageFilename$, "_48dp.png", "", 1)
 					
@@ -75,7 +75,7 @@ for s = 1 to 5
 					if (y = 0 and x = 0)
 						inc subimages
 						CloseFile(subimages)
-						OpenToWrite(subimages, "raw:" + rawMediaFolderPath$ + "/" + outputFolder$ + "/" + str(pixels) + "px/Material-Icons-" + AddLeadingZeros(str(subimages), 3) + " subimages.txt")
+						OpenToWrite(subimages, "raw:" + rawMediaFolderPath$ + "/" + outputFolder$ + "/" + str(pixels) + "px/Material-Icons-" + AddLeadingZeros(str(subimages), 2) + " subimages.txt")
 					endif
 								
 					inc numberOfIcons
