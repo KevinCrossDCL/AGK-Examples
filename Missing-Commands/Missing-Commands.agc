@@ -52,7 +52,7 @@ endfunction formattedNumber$
 
 
 
-function GetObjectHit(cameraID as integer, x# as float, y# as float, distance# as float)
+function GetObjectHit(x# as float, y# as float, distance# as float)
 	local unitX# as float
 	local unitY# as float
 	local unitZ# as float
@@ -67,12 +67,12 @@ function GetObjectHit(cameraID as integer, x# as float, y# as float, distance# a
 	unitX# = Get3DVectorXFromScreen(x#, y#)
 	unitY# = Get3DVectorYFromScreen(x#, y#)
 	unitZ# = Get3DVectorZFromScreen(x#, y#)
-	startVectorX# = unitX# + GetCameraX(cameraID)
-	startVectorY# = unitY# + GetCameraY(cameraID)
-	startVectorZ# = unitZ# + GetCameraZ(cameraID)
-	endVectorX# = distance# * unitX# + GetCameraX(cameraID)
-	endVectorY# = distance# * unitY# + GetCameraY(cameraID)
-	endVectorZ# = distance# * unitZ# + GetCameraZ(cameraID)
+	startVectorX# = unitX# + GetCameraX(1)
+	startVectorY# = unitY# + GetCameraY(1)
+	startVectorZ# = unitZ# + GetCameraZ(1)
+	endVectorX# = distance# * unitX# + GetCameraX(1)
+	endVectorY# = distance# * unitY# + GetCameraY(1)
+	endVectorZ# = distance# * unitZ# + GetCameraZ(1)
 	objectHit = ObjectRayCast(0, startVectorX#, startVectorY#, startVectorZ#, endVectorX#, endVectorY#, endVectorZ#)
 endfunction objectHit
 
