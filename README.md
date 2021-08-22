@@ -21,6 +21,9 @@ In your app you are only likely to use one style and size, so you would only nee
 
 To see all of the available icons and their names, visit: https://material.io/resources/icons
 
+### Missing Commands
+This is a single file containing a number of functions/commands that are missing from AGK. These use a similar naming convention to what TGC use so there is a chance that some of these may clash if they do release commands in the future with the same name. These aren't all mine, some were lifted from the help files, discord, or the forum.
+
 ### Pixel Art To Sprite Art
 This script contains a simple function that reads any image and converts it to pixel art built from coloured sprites. It works best with images that have large blocks of the same colour in i.e. a pixel art image, or an Arkanoid type game level screen.
 
