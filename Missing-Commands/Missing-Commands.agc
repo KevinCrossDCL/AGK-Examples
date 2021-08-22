@@ -102,6 +102,14 @@ endfunction z#
 
 
 
+function Lerp(min# as float, max# as float, f# as float)
+	local result# as float
+	
+	result# = min# + f# * (max# - min#)
+endfunction result#
+
+
+
 function MaxFloat(a# as float, b# as float)
 	local maxValue# as float
 	
