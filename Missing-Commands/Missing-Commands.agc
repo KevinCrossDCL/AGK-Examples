@@ -158,6 +158,38 @@ endfunction minValue
 
 
 
+function PercentToVirtualHeight(percentage# as float)
+	local virtualHeight# as float
+	
+	virtualHeight# = ((GetScreenBoundsBottom() - GetScreenBoundsTop()) / 100.0) * percentage#
+endfunction virtualHeight#
+
+
+
+function PercentToVirtualWidth(percentage# as float)
+	local virtualWidth# as float
+	
+	virtualWidth# = ((GetScreenBoundsRight() - GetScreenBoundsLeft()) / 100.0) * percentage#
+endfunction virtualWidth#
+
+
+
+function PercentToVirtualX(percentage# as float)
+	local virtualX# as float
+	
+	virtualX# = GetScreenBoundsLeft() + (((GetScreenBoundsRight() - GetScreenBoundsLeft()) / 100.0) * percentage#)
+endfunction virtualX#
+
+
+
+function PercentToVirtualY(percentage# as float)
+	local virtualY# as float
+	
+	virtualY# = GetScreenBoundsTop() + (((GetScreenBoundsBottom() - GetScreenBoundsTop()) / 100.0) * percentage#)
+endfunction virtualY#
+
+
+
 function SetObjectSize(objectID as integer, x# as float, y# as float, z# as float)
 	local originalSizeX# as float
 	local originalSizeY# as float
