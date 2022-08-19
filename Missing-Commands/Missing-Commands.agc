@@ -102,6 +102,14 @@ endfunction z#
 
 
 
+function InRange(variable as integer, min# as float, max# as float)
+	local inRange as integer : inRange = 0
+	
+	if (variable >= min# and variable# <= max#) then inRange = 1
+endfunction inRange
+
+
+
 function Lerp(min# as float, max# as float, f# as float)
 	local result# as float
 	
