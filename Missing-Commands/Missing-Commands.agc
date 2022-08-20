@@ -44,7 +44,7 @@ function AddThousandsSeperator(number as integer, seperator$ as string)
 		counter = 0
 		for i = numberLength to 1 step -1
 			inc counter
-			formattedNumber$ = Mid(str(number), i, 1) + formattedNumber$
+			formattedNumber$ = mid(str(number), i, 1) + formattedNumber$
 			if (mod(counter, 3) = 0 and i <> 1) then formattedNumber$ = seperator$ + formattedNumber$
 		next
 	endif
@@ -207,4 +207,40 @@ function SetObjectSize(objectID as integer, x# as float, y# as float, z# as floa
     originalSizeY# = GetObjectSizeMaxY(objectID) - GetObjectSizeMinY(objectID)
     originalSizeZ# = GetObjectSizeMaxZ(objectID) - GetObjectSizeMinZ(objectID)
     SetObjectScalePermanent(objectID, x# / originalSizeX#, y# / originalSizeY#, z# / originalSizeZ#)
+endfunction
+
+
+
+function SetSpriteColorFromHex(spriteID as integer, color$ as string)
+	local rgba as integer[4] : rgba[1] = 255 : rgba[2] = 255 : rgba[3] = 255 : rgba[4] = 255
+	
+	color$ = ReplaceString(color$, "#", "", -1)
+	if (len(color$) = 3)
+		rgba[1] = val(mid(color$, 1, 1) + mid(color$, 1, 1), 16)
+		rgba[2] = val(mid(color$, 2, 1) + mid(color$, 2, 1), 16)
+		rgba[3] = val(mid(color$, 3, 1) + mid(color$, 3, 1), 16)
+	elseif (len(color$) = 6)
+		rgba[1] = val(mid(color$, 1, 2), 16)
+		rgba[2] = val(mid(color$, 3, 2), 16)
+		rgba[3] = val(mid(color$, 5, 2), 16)
+	endif
+	SetSpriteColor(spriteID, rgba[1], rgba[2], rgba[3], rgba[4])
+endfunction
+
+
+
+function SetTextColorFromHex(textID as integer, color$ as string)
+	local rgba as integer[4] : rgba[1] = 255 : rgba[2] = 255 : rgba[3] = 255 : rgba[4] = 255
+	
+	color$ = ReplaceString(color$, "#", "", -1)
+	if (len(color$) = 3)
+		rgba[1] = val(mid(color$, 1, 1) + mid(color$, 1, 1), 16)
+		rgba[2] = val(mid(color$, 2, 1) + mid(color$, 2, 1), 16)
+		rgba[3] = val(mid(color$, 3, 1) + mid(color$, 3, 1), 16)
+	elseif (len(color$) = 6)
+		rgba[1] = val(mid(color$, 1, 2), 16)
+		rgba[2] = val(mid(color$, 3, 2), 16)
+		rgba[3] = val(mid(color$, 5, 2), 16)
+	endif
+	SetTextColor(textID, rgba[1], rgba[2], rgba[3], rgba[4])
 endfunction
